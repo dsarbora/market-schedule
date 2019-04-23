@@ -39,10 +39,18 @@ const marketSchedule = [
        booth: "9G"
     }
    ];
-   
+
 function LocationList(){
     return(
-
+        <div>
+            {marketSchedule.map((element, index) =>
+            <Location day={element.day}
+            location={element.location}
+            hours={element.hours}
+            booth={element.booth}
+            key={index}/>
+        )}
+        </div>
     );
 }
 
