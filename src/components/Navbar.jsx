@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div>
@@ -16,8 +16,12 @@ function Navbar() {
           font-size: 25px;
         }
       `}</style>
-      <button className="btn-size">Seasons</button>
-      <button className="btn-size">Locations</button>
+      <Link to="/produce">
+        <button className="btn-size">Seasons</button>
+      </Link>
+      <Link to="/">
+        <button className="btn-size">Locations</button>
+      </Link>
     </div>
   );
 }

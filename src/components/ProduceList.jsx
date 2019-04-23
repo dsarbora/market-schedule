@@ -1,6 +1,6 @@
 import React from "react";
 import Produce from "./Produce";
-import Month from "./Month";
+
 const availableProduce = [
   {
     month: "January",
@@ -272,14 +272,23 @@ const availableProduce = [
 
 function ProduceList() {
   return (
-    <div>
+    <div className="inline">
+      <style jsx>{`
+        .inline {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+        }
+        h6 {
+          margin: 3px;
+        }
+      `}</style>
       {availableProduce.map((item, index) => (
         <Produce
           month={item.month}
           key={index}
           produce={item.selection.map((newItem, newIndex) => (
             <div key={newIndex}>
-              <p>{newItem}</p>
+              <h6>{newItem}</h6>
             </div>
           ))}
         />

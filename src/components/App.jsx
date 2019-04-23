@@ -2,12 +2,20 @@ import React from "react";
 import Navbar from "./Navbar";
 import LocationList from "./LocationList";
 import ProduceList from "./ProduceList";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <style jsx>{`
+      <Switch>
+        <Route exact path="/" component={LocationList} />
+      </Switch>
+      <Switch>
+        <Route path="/produce" component={ProduceList} />
+      </Switch>
+
+      {/* <style jsx>{`
         .right {
           float: right;
         }
@@ -20,7 +28,7 @@ function App() {
       </div>
       <div className="left">
         <ProduceList />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -7,7 +7,7 @@ function Location(props) {
       <style jsx>{`
         div {
           border: 2px solid #80a32d;
-          width: 400px;
+          width: 300px;
           padding: 5px;
           margin-top: 10px;
         }
