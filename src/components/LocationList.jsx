@@ -43,6 +43,12 @@ const marketSchedule = [
 function LocationList() {
   return (
     <div>
+      <style jsx>{`
+        div {
+          margin-left: 60px;
+          margin-top: 40px;
+        }
+      `}</style>
       {marketSchedule.map((element, index) => (
         <Location
           day={element.day}
