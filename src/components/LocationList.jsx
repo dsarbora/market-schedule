@@ -45,7 +45,7 @@ function LocationList() {
     <div>
       <style jsx>{`
         div {
-          margin-left: 60px;
+          margin-left: 150px;
           margin-top: 40px;
         }
       `}</style>
